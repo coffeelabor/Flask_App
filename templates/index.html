@@ -4,20 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css" />
     <title>WDV_495</title>
 </head>
 <body>
-    <div>
-        <h1>Form</h1>
-        <form>
-            <label for="school">School</label>
-            <input type="text" name="school" >
-            <label for="First">First Name</label>
-            <input type="text" name="First">
-            <label for="Last">School</label>
-            <input type="text" name="Last">
+    <div >
+        <h1>Python Form With Flask</h1>
+    </div>
+    <div class="divContainer">
+        <form action="/submit" method="POST" class="formContainer siteTheme">
+            {% if message %}
+                <p style="color: red;">{{message}}</p>
+            {% endif %}
+            <label for="school" class="label">School</label>
+            <input type="text" name="school" placeholder="School">
+            <label for="first" class="label">First Name</label>
+            <input type="text" name="first" placeholder="First Name">
+            <label for="last" class="label">Last Name</label>
+            <input type="text" name="last" placeholder="Last Name">
             <br/>
-            <input type="submit" value="submit">
+            <input type="submit" value="Submit">
         </form>
     </div>
 </body>
